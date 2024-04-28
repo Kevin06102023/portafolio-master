@@ -1,0 +1,393 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contenedor-texto {
+    margin-top: 30%; /* Ajusta el margen superior para que esté en la mitad */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    text-align: center; /* Centra horizontalmente el texto */
+    border: 2px solid white;
+}
+
+.texto {
+    display: inline-block; /* Para que el recuadro se ajuste al contenido */
+    padding: 20px; /* Espacio alrededor del contenido */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centrar horizontalmente */
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+.nombre, .profesion {
+    color: white; /* Color del texto */
+    text-align: center;
+
+}
+
+/*------Header--------*/
+.header {
+  background: url('../imagenes/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+
+.header .contenedor {
+    position: relative;
+    height: 700px;
+}
+
+.menu {
+    text-align: right;
+    margin-top: 20px; /* Espacio superior */
+    margin-right: 20px; /* Margen derecho */
+}
+
+.menu a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    transition: color 0.3s; 
+    margin-right: 20px; 
+}
+
+.menu a:last-child {
+    margin-right: 0;
+}
+
+.menu a:hover {
+    color: blue; /* Color del texto al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Main */
+.main {
+    background: url('../imagenes/textura.jpg');
+    background-repeat: repeat;
+    background-size: 100% 100%;
+}
+
+.main .acerca-de {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    margin-top: 150px; /* Ajustar el espacio entre la imagen y el texto */
+}
+
+
+.main .acerca-de .foto {
+    width: 150px; /* Ancho de la imagen */
+    height: 150px; /* Altura de la imagen (mismo valor para hacerla circular) */
+    position: absolute;
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    top: 50%; /* Colocar la imagen en el centro verticalmente */
+    margin-top: 300px; /* Ajustar la mitad de la altura de la imagen para centrarla verticalmente */
+    z-index: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .35);
+    border-radius: 50%; /* Mantener la imagen circular */
+    overflow: hidden; 
+}
+
+.main .acerca-de .foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main .acerca-de article {
+    background: #fff;
+    padding: 40px;
+    position: relative;
+    z-index: 1; /* Cambio en z-index */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+    margin-top: 150px; /* Ajustar el espacio entre la imagen y el texto */
+}
+
+.main .acerca-de article h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.main .acerca-de article p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.main .acerca-de .titulo {
+    font-size: 36px; /* Tamaño de fuente más grande */
+    color: goldenrod; /* Cambiar el color del texto a rojo, puedes usar el código de color que desees */
+    margin-bottom: 20px; /* Agregar un margen inferior para separarlo del contenido */
+}
+
+.texto {
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centrar horizontalmente */
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+.titulo {
+    font-size: 24px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.bold {
+    color: blue; /* Color azul para el nombre y el nombre del instituto */
+    text-decoration: underline; /* Subrayado para el nombre y el nombre del instituto */
+}
+
+/* Trabajos */
+.main .trabajos {
+    padding: 40px 0;
+    overflow: hidden; /* Añadido para corregir cualquier posible desbordamiento */
+}
+
+.main .trabajo {
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: calc(25% - 20px); /* Ancho de cada trabajo con margen derecho */
+    float: left;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho definido */
+    margin-right: 20px; /* Márgen derecho entre cada trabajo */
+    margin-bottom: 20px; /* Márgen inferior entre cada fila de trabajos */
+}
+
+.main .trabajo:nth-child(4n) {
+    margin-right: 0; /* Elimina el margen derecho en el cuarto trabajo de cada fila */
+}
+
+.main .trabajo .thumb {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Añadido para asegurar que las imágenes no se desborden */
+}
+
+.main .trabajo .thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.main .trabajo .thumb img:hover {
+    opacity: 0.8;
+}
+
+.main .trabajo .descripcion {
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+.main .trabajo .descripcion .nombre {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main .trabajo .descripcion .categoria {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Contacto */
+.contacto {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto .boton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto .boton:hover {
+    background-color: #0056b3;
+}
+
+/* Redes Sociales */
+.redes-sociales {
+    background: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.redes-sociales a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.redes-sociales a:hover {
+    color: aqua;
+}
+
+/* Query de 800px */
+@media screen and (max-width: 800px) {
+    header .contenedor {
+        position: static;
+        height: auto;
+    }
+
+    header .texto {
+        position: static;
+        margin: 100px 0;
+    }
+
+    header .menu {
+        text-align: center;
+    }
+
+    header .menu a {
+        margin: 10px 20px;
+    }
+
+    header .texto .nombre {
+        font-size: 30px;
+    }
+
+    header .texto h3 {
+        font-size: 18px;
+    }
+
+    .main .acerca-de .foto {
+        width: 100%;
+        position: relative;
+    }
+
+    .main .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+
+    .main .menu {
+        padding-top: 300px;
+    }
+
+    .main .menu article {
+        width: 100%;
+    }
+
+    .main .galeria .foto {
+        width: 50%;
+    }
+
+    .main .mapa {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Query de 400px */
+@media screen and (max-width: 400px) {
+    header .contenedor {
+        position: static;
+        height: auto;
+    }
+
+    header .texto {
+        position: static;
+        margin: 100px 0;
+    }
+
+    header .menu {
+        text-align: center;
+    }
+
+    header .menu a {
+        margin: 2px 5px;
+    }
+
+    header .texto .nombre {
+        font-size: 20px;
+    }
+
+    header .texto h3 {
+        font-size: 15px;
+    }
+
+    .main .acerca-de .contenedor h3 {
+        font-size: 20px;
+    }
+
+    .main .acerca-de .contenedor p {
+        font-size: 15px;
+    }
+
+    .main .menu .contenedor .titulo {
+        font-size: 20px;
+    }
+
+    .main .menu .contenedor .contenedorMenu .categoria {
+        font-size: 20px;
+    }
+
+    .main .menu .contenedor .contenedorMenu p {
+        font-size: 15px;
+    }
+
+    .main .acerca-de .foto {
+        width: 100%;
+        position: relative;
+    }
+
+    .main .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+
+    .main .menu {
+        padding-top: 300px;
+    }
+
+    .main .menu article {
+        width: 100%;
+    }
+
+    .main .galeria .foto {
+        width: 50%;
+    }
+
+    .main .mapa {
+        width: 75%; 
+        max-height: 300px; 
+        margin: auto;
+    }
+}
+
